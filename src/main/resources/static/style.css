@@ -49,12 +49,13 @@ body {
     display: flexbox;
     height: 100vh;
     width: 100vw;
+    background-color: #26B1C9;
 }
 
 .nav_bar{
-    height: 60px;
+    height: 70px;
     width: 100%;
-    background-color: gray;
+    background-color: #2C3233;
 }
 
 .nav_bar .nav_bar_container{
@@ -66,17 +67,18 @@ body {
     position:absolute;
     display: block;
     height: 40px;
-    width: 50px;
+    width: 55px;
+    top: 10px;
     left: 20px;
-    opacity: 1;
+    opacity: 0;
     z-index: 2;
 }
 .nav_bar .nav_bar_container .hamburguer_lines {
     display: block;
     height: 40px;
     width: 50px;
-    top: 3px;
-    left: 20px;
+    top: 10px;
+    left: 25px;
     position:absolute;
     opacity: 1;
     z-index: 1;
@@ -91,25 +93,34 @@ body {
     height: 20%;
     width: 100%;
     border-radius: 20px;
-    background-color: black;
+    background-color: #02C0E1;
 
 }
 
 .grid_jobs_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    align-items: start;
+    align-items: stretch;
     justify-items: center;
     gap: 16px;
     height: 90vh;
     width: 100vw;
-    background-color: rgb(155, 38, 38);
+    background-color: #26B1C9;
 }
 
 .job{
+    margin-top: 20px;
     width: 300px;
     height: 320px;
-    background-color: black;
+    background-color: #3891A1;
+}
+
+.side_panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 314ms ease;
 }
 
 input:checked ~ .side_panel{
@@ -117,5 +128,15 @@ input:checked ~ .side_panel{
     height: 100%;
     position: absolute;
     z-index: 1;
-    background-color: blue;
+    transform: translateX(0);
+    background-color: #2C3233;
+}
+
+.profile{
+    position: relative;
+    left: 95%;
+    top: 5px;
+    width: 60px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
 }
